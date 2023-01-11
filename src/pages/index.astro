@@ -1,0 +1,46 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="SolARM Project">
+	<main>
+		<div class="flex justify-center bg-orange-500 w-full p-2 text-orange-100 text-2xl gap-4">
+			<a class="" href="/">Home</a>
+			<a class="" href="https://github.com/solarm-project">Sources</a>
+		</div>
+		<div class="flex flex-col md:flex-row mx-auto mt-5 px-4 md:mt-20 md:px-20">
+			<div class="flex justify-center"><img class="w-40" src="/solarm.svg"/></div>
+			<div class="md:w-4/5 md:ml-5">
+				<h2 class="text-3xl mt-5">The SolARM Project</h2>
+				<p class="mt-2 md:text-justify">The SolARM project is a collection of software tools and services that allow to easily create custom illumos Distributions in a collaborative way.
+				SolARM is based on the IPS package manager and lessons learned while maintaining the existing illumos Distributions.
+				The Project uses existing illumos terminology and ideas but also does not shy away from changes when those are more helpfull to achieve the Design Goals</p>
+			</div>
+		</div>
+		<div class="flex flex-col md:grid md:grid-cols-3 md:gap-3 mx-auto mt-5 px-4 md:mt-20">
+			<div class="md:px-3 md:text-justify">
+				<h2 class="text-2xl mt-5 underline">Gates</h2>
+				<p class="mt-2">SolARM features collections of sources and build instructions called gates.
+				Each gate can have sub gates that can be shared by multiple distributions. However each distribution has one gate that gives access to all the sources used in the distributions.</p>
+			</div>
+
+			<div class="md:px-3 md:text-justify">
+				<h2 class="text-xl mt-5 underline">Components</h2>
+				<p class="mt-2">A Component contains the build instructions for a specific piece of software and all patches and changes that have not yet been upstreamed to the softwares maintainer.</p>
+			</div>
+			<div class="md:px-3 md:text-justify">
+				<h2 class="text-xl mt-5 underline">Distributions</h2>
+				<p class="mt-2">Distributions are a set of precompiled software collections ready to be used on a machine that has Compatible hardware. Currently the reference Arm Distribution is implemented with these tools.</p>
+			</div>
+
+			<div class="md:px-3 md:text-justify">
+				<h2 class="text-xl mt-5 underline">Ports</h2>
+				<p class="mt-2">Ports is the tool used to run the gates and components build instructions and create packages from them. All instructions are data based and not imperative. Ports controls the process and standardises the process.
+				This is based on the experience from OpenIndiana's userland gate, OmniOS Community Edition's build and extra scripts and pkgsrc. Ports is implemented in Rust so that libraries and bindings for the dataformats can be easily produced.
+				</p>
+			</div>
+		</div>
+		<div class="mb-10"></div>
+	</main>
+</Layout>
+
