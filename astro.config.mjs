@@ -6,6 +6,5 @@ import tailwind from "@astrojs/tailwind";
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind()],
-  site: 'https://solarm-project.github.io',
-  base: '/solarm-website'
+  site: 'https://solarm.org'
 });
