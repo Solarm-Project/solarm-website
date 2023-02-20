@@ -1,17 +1,17 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-const base = '/solarm-website';
+const image = `${import.meta.env.BASE_URL}solarm.svg`;
 ---
 
-<Layout title="SolARM Project">
+<Layout title="SolARM Project" description="The SolARM project is a collection of software tools and services that allow to easily create custom illumos Distributions in a collaborative way. SolARM is based on the IPS package manager and lessons learned while maintaining the existing illumos Distributions.">
 	<main>
 		<div class="flex justify-center bg-orange-500 w-full p-2 text-orange-100 text-2xl gap-4">
 			<a class="" href="/">Home</a>
 			<a class="" href="https://github.com/solarm-project">Sources</a>
 		</div>
 		<div class="flex flex-col md:flex-row mx-auto mt-5 px-4 md:mt-20 md:px-20">
-			<div class="flex justify-center"><img class="w-40" src=`${base}/solarm.svg`/></div>
+			<div class="flex justify-center"><img class="w-40" src={image} /></div>
 			<div class="md:w-4/5 md:ml-5">
 				<h2 class="text-3xl mt-5">The SolARM Project</h2>
 				<p class="mt-2 md:text-justify">The SolARM project is a collection of software tools and services that allow to easily create custom illumos Distributions in a collaborative way.
